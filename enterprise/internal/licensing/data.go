@@ -209,12 +209,14 @@ var planDetails = map[Plan]PlanDetails{
 	},
 	PlanFree0: {
 		Features: []Feature{
+			FeatureACLs,
 			FeatureSSO,
 			FeatureMonitoring,
 			&FeatureBatchChanges{MaxNumChangesets: 10},
 			&FeaturePrivateRepositories{Unrestricted: true},
 		},
 		ExpiredFeatures: []Feature{
+			FeatureACLs,
 			FeatureSSO,
 			FeatureMonitoring,
 			&FeatureBatchChanges{MaxNumChangesets: 10},
@@ -223,11 +225,15 @@ var planDetails = map[Plan]PlanDetails{
 	},
 	PlanFree1: {
 		Features: []Feature{
+			FeatureSSO,
+			FeatureACLs,
 			FeatureMonitoring,
 			&FeatureBatchChanges{MaxNumChangesets: 10},
 			&FeaturePrivateRepositories{MaxNumPrivateRepos: 1},
 		},
 		ExpiredFeatures: []Feature{
+			FeatureSSO,
+			FeatureACLs,
 			FeatureMonitoring,
 			&FeatureBatchChanges{MaxNumChangesets: 10},
 			&FeaturePrivateRepositories{MaxNumPrivateRepos: 1},
